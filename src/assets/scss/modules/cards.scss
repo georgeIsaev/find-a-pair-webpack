@@ -1,0 +1,96 @@
+// переворачивание стороны
+.card.flip {
+  transform: rotateY(180deg);
+}
+
+// здесь находится скорость перевертывания
+.card {
+  position: relative;
+  transition: .6s;
+  transform-style: preserve-3d;
+
+  width: calc(63.5px * 2);
+  height: calc(88.9px * 2);
+  margin-bottom: 2vh;
+}
+
+// скройте обратную сторону во время переворота
+.front, .back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+// лицевая сторона размещена над обратной
+.front {
+  z-index: 2;
+}
+
+// обратная, изначально скрытая сторона
+.back {
+  transform: rotateY(180deg);
+}
+
+.card.found {
+  .front, .back {    
+    border: none;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+  }
+  
+  // лицевая сторона размещена над обратной
+  .front {
+    background: none;
+    background-size: none;
+  }
+  
+  // обратная, изначально скрытая сторона
+  .back {
+    background: none;
+    transform: none;
+  }
+}
+
+// Медиа запросы
+@media only screen and (min-width : $smDesktopWidth) and (max-width: $desktopWidth) and (max-height: $tableWidth) {
+  .card {
+    width: calc(63.5px * 1.5);
+    height: calc(88.9px * 1.5);
+  }
+}
+
+@media only screen and (min-width : $tableWidth) and (max-width: $smDesktopWidth) and (max-height: $phoneWidth) {
+  .card {
+    width: calc(63.5px * 0.8);
+    height: calc(88.9px * 0.8);
+  }
+}
+
+@media only screen and (min-width : $phoneWidth) and (max-width: $tableWidth) and (max-height: $phoneWidth) {
+  .card {
+    width: calc(63.5px * 0.9);
+    height: calc(88.9px * 0.9);
+  }
+}
+
+@media only screen and (min-width : $phoneWidth) and (max-width: $tableWidth) and (max-height: $smPhoneWidth) {
+  .card {
+    width: calc(63.5px * 0.7);
+    height: calc(88.9px * 0.7);
+  }
+}
+
+@media only screen and (min-width : $smPhoneWidth) and (max-width: $phoneWidth) {
+  .card {
+    width: 63.5px;
+    height: 88.9px;
+  }
+}
