@@ -1,9 +1,5 @@
 {  
-  "starWars": {
-    "cardsShirtImg": "/assets/img/shirt_1.svg",
-    "cardsShirtBackColor": "#8b0606",
-    "cardsBackColor": "#d4baba",
-    "cardsImg": [
+  "starWars": [
       "/assets/img/front_1.svg",
       "/assets/img/front_2.svg",
       "/assets/img/front_3.svg",
@@ -12,34 +8,13 @@
       "/assets/img/front_6.svg",
       "/assets/img/front_7.svg",
       "/assets/img/front_8.svg"
-    ]
-  },
+    ],
 
-  "rickAndMorty": {
-    "cardsShirtImg": "",
-    "cardsShirtBackColor": "",
-    "cardsBackColor": "",
-    "cardsImg": []
-  },
+  "rickAndMorty": [],
 
-  "figure": {
-    "cardsShirtImg": "",
-    "cardsShirtBackColor": "",
-    "cardsBackColor": "",
-    "cardsImg": []
-  },
+  "figure": [],
 
-  "animal": {
-    "cardsShirtImg": "",
-    "cardsShirtBackColor": "",
-    "cardsBackColor": "",
-    "cardsImg": []
-  },
+  "animal": [],
 
-  "numeric": {
-    "cardsShirtImg": "",
-    "cardsShirtBackColor": "",
-    "cardsBackColor": "",
-    "cardsImg": []
-  }
+  "numeric": []
 }

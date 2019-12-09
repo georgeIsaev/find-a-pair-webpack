@@ -2,8 +2,8 @@
 
 export class StartTheGame {
   constructor() {
-    const $el = this.$el = document.createElement('div');
-    const container = this.container = document.querySelector('.container');
+    this.$el = document.createElement('div');
+    this.container = document.querySelector('.container');
 
     this.chooseTheme()
   }

@@ -10,17 +10,17 @@ export class PlayingField {
     this.container = document.querySelector('.container');
     this.gameTheme = Settings.gameTheme;
 
-    this.addShuffleCards(16, this.gameTheme.cardsImg, this.gameTheme.cardsBackColor, this.gameTheme.cardsShirtImg, this.gameTheme.cardsShirtBackColor);
+    this.addShuffleCards(16, this.gameTheme.theme, this.gameTheme.cardsImg);
     Rules.preview();
     this.setContainerWidth();
   }
 
-  addShuffleCards(cardsCount, cardImg, cardBackColor, shirtImg, shirtBackColor) {
+  addShuffleCards(cardsCount, theme, cardImg) {
     const cards = new Array();
     
     for (let i = 0; i < cardsCount / 2; i++) {
-      let card = new Card(i, cardImg[i], cardBackColor, shirtImg, shirtBackColor);
-      let cardCopy = new Card(i, cardImg[i], cardBackColor, shirtImg, shirtBackColor);
+      let card = new Card(i, theme, cardImg[i]);
+      let cardCopy = new Card(i, theme, cardImg[i]);
 
       cards.push(card.$el);
       cards.push(cardCopy.$el);

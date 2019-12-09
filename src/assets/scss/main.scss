@@ -57,9 +57,9 @@ ul, li {
 }
 
 // Modules
-@import "modules/cards.scss";
-@import "modules/footer.scss";
-@import "modules/header.scss";
-@import "modules/playing-field.scss";
-@import "modules/congratulation.scss";
-@import "modules/startTheGame.scss";
+@import "modules/cards/cards.scss";
+@import "modules/header&footer/footer.scss";
+@import "modules/header&footer/header.scss";
+@import "modules/playing-field/playing-field.scss";
+@import "modules/congratulation/congratulation.scss";
+@import "modules/startTheGame/startTheGame.scss";

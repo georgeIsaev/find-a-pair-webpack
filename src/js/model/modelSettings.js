@@ -6,11 +6,11 @@ export class Settings {
   constructor() {}
 
   static setGameTheme(value) {
-    if (value === 'StarWars') Settings.gameTheme = gameThemeJSON.starWars;
-    if (value === 'RickAndMorty') Settings.gameTheme = gameThemeJSON.rickAndMorty;
-    if (value === 'Figure') Settings.gameTheme = gameThemeJSON.figure;
-    if (value === 'Animal') Settings.gameTheme = gameThemeJSON.animal;
-    if (value === 'Numeric') Settings.gameTheme = gameThemeJSON.numeric;
+    if (value === 'StarWars') Settings.gameTheme = {theme: '_starWars', cardsImg: gameThemeJSON.starWars};
+    if (value === 'RickAndMorty') Settings.gameTheme = {theme: '_rickAndMorty', cardsImg: gameThemeJSON.starWars};
+    if (value === 'Figure') Settings.gameTheme = {theme: '_figure', cardsImg: gameThemeJSON.starWars};
+    if (value === 'Animal') Settings.gameTheme = {theme: '_animal', cardsImg: gameThemeJSON.starWars};
+    if (value === 'Numeric') Settings.gameTheme = {theme: '_numeric', cardsImg: gameThemeJSON.starWars};
   }
 
 }
