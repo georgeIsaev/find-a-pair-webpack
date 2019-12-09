@@ -9,7 +9,6 @@ export class PlayingField {
   constructor() {
     this.container = document.querySelector('.container');
     this.gameTheme = Settings.gameTheme;
-
     this.addShuffleCards(16, this.gameTheme.theme, this.gameTheme.cardsImg);
     Rules.preview();
     this.setContainerWidth();

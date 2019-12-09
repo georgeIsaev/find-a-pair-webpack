@@ -1,16 +1,25 @@
 {  
   "starWars": [
-      "/assets/img/front_1.svg",
-      "/assets/img/front_2.svg",
-      "/assets/img/front_3.svg",
-      "/assets/img/front_4.svg",
-      "/assets/img/front_5.svg",
-      "/assets/img/front_6.svg",
-      "/assets/img/front_7.svg",
-      "/assets/img/front_8.svg"
+      "/assets/img/starWars/front_1.svg",
+      "/assets/img/starWars/front_2.svg",
+      "/assets/img/starWars/front_3.svg",
+      "/assets/img/starWars/front_4.svg",
+      "/assets/img/starWars/front_5.svg",
+      "/assets/img/starWars/front_6.svg",
+      "/assets/img/starWars/front_7.svg",
+      "/assets/img/starWars/front_8.svg"
     ],
 
-  "rickAndMorty": [],
+  "rickAndMorty": [
+    "/assets/img/rickAndMorty/front_1.svg",
+    "/assets/img/rickAndMorty/front_2.svg",
+    "/assets/img/rickAndMorty/front_3.svg",
+    "/assets/img/rickAndMorty/front_4.svg",
+    "/assets/img/rickAndMorty/front_5.svg",
+    "/assets/img/rickAndMorty/front_6.svg",
+    "/assets/img/rickAndMorty/front_7.svg",
+    "/assets/img/rickAndMorty/front_8.svg"
+  ],
 
   "figure": [],
 

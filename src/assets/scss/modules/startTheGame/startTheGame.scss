@@ -50,4 +50,10 @@
       color: #115543;
     }
   }
+
+  &__list__title._rickAndMorty:hover {}
+  &__list__title._starWars:hover {}
+  &__list__title._figure:hover {}
+  &__list__title._animal:hover {}
+  &__list__title._numeric:hover {}
 }

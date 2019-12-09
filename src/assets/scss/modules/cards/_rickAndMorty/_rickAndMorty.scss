@@ -1,0 +1,13 @@
+.card._rickAndMorty {
+  .front {
+    background: url('/assets/img/rickAndMorty/shirt_1.svg') no-repeat center #8b0606;
+    background-size: 70%;
+  }
+
+  .back {
+    background-size: 60%;
+    background-color: #d4baba;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
