@@ -1,12 +1,12 @@
 .card._rickAndMorty {
   .front {
-    background: url('/assets/img/rickAndMorty/shirt_1.svg') no-repeat center #8b0606;
-    background-size: 70%;
+    background: url('/assets/img/rickAndMorty/shirt_1.svg') center no-repeat, url('/assets/img/rickAndMorty/shirt_2.png') center / cover;
+    background-size: 90%;
   }
 
   .back {
-    background-size: 60%;
-    background-color: #d4baba;
+    background-size: 80%;
+    background-color: #c3e7d2;
     background-repeat: no-repeat;
     background-position: center;
   }

@@ -1,3 +1,9 @@
+@import './_animal/animal.scss';
+@import './_figure/figure.scss';
+@import './_numeric/numeric.scss';
+@import './_rickAndMorty/rickAndMorty.scss';
+@import './_starWars/starWars.scss';
+
 .playing-field {
   display: flex;
   justify-content: center;

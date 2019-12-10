@@ -28,6 +28,7 @@ class UserSettings {
     chooseThemeListTitle.forEach(item => {
       item.addEventListener('click', x => {
         UserSettings.theme = item.classList[1];
+        
         Settings.setGameTheme(UserSettings.theme);
         this.container.innerHTML = '';
 

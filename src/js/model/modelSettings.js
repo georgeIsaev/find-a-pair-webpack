@@ -6,10 +6,10 @@ export class Settings {
   constructor() {}
 
   static setGameTheme(value) {
-    if (value === '_starWars') Settings.gameTheme = {theme: '_starWars', cardsImg: gameThemeJSON.starWars};
-    if (value === '_rickAndMorty') Settings.gameTheme = {theme: '_rickAndMorty', cardsImg: gameThemeJSON.rickAndMorty};
-    if (value === '_figure') Settings.gameTheme = {theme: '_figure', cardsImg: gameThemeJSON.figure};
-    if (value === '_animal') Settings.gameTheme = {theme: '_animal', cardsImg: gameThemeJSON.animal};
-    if (value === '_numeric') Settings.gameTheme = {theme: '_numeric', cardsImg: gameThemeJSON.numeric};
+    const theme = value;
+    const playingField = document.querySelector('.playing-field');
+    
+    Settings.gameTheme = {theme: theme, cardsImg: gameThemeJSON.default[theme]};
+    playingField.classList.add(theme);
   }
 }

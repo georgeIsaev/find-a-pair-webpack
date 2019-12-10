@@ -1,5 +1,5 @@
 {  
-  "starWars": [
+  "_starWars": [
       "/assets/img/starWars/front_1.svg",
       "/assets/img/starWars/front_2.svg",
       "/assets/img/starWars/front_3.svg",
@@ -10,7 +10,7 @@
       "/assets/img/starWars/front_8.svg"
     ],
 
-  "rickAndMorty": [
+  "_rickAndMorty": [
     "/assets/img/rickAndMorty/front_1.svg",
     "/assets/img/rickAndMorty/front_2.svg",
     "/assets/img/rickAndMorty/front_3.svg",
@@ -21,9 +21,9 @@
     "/assets/img/rickAndMorty/front_8.svg"
   ],
 
-  "figure": [],
+  "_figure": [],
 
-  "animal": [],
+  "_animal": [],
 
-  "numeric": []
+  "_numeric": []
 }
