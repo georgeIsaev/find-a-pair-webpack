@@ -8,7 +8,9 @@ export class Card {
 
     $el.classList.add('card');
     $el.setAttribute('data-id', id);
-    $el.innerHTML = `<div class="front"></div><div class="back"></div>`;
+    $el.innerHTML = 
+      `<div class="front"></div>
+      <div class="back"></div>`;
     $el.classList.add(theme);
     $el.children[1].style.backgroundImage = `url(${cardImg})`;
 
@@ -16,7 +18,7 @@ export class Card {
   }
 
   flip() {
-    this.$el.addEventListener('click', function(x) {
+    this.$el.addEventListener('click', function(e) {
       if(this.classList.contains('flip')) return;
 
       this.classList.toggle('flip');

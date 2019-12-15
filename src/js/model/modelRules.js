@@ -40,7 +40,10 @@ export class Rules {
 
   static congratulation() {
     if (document.querySelectorAll('.found').length == document.querySelectorAll('.card').length) {
-      document.querySelector('.container').innerHTML = '<h1> Победа! </h1>';
+      document.querySelector('.container').innerHTML = 
+        `<div class="congrat">
+          <h1 class="congrat__title"> Победа! </h1>
+        </div>`;
     }
   }
 
@@ -57,5 +60,50 @@ export class Rules {
           card.style.pointerEvents = '';
         }, 3000);
       })
+  }
+
+  static getTime() {
+    let time = new Date();
+    const timerMin = document.querySelector('.timer__min');
+    const timerSec = document.querySelector('.timer__sec');
+    const timerMilSec = document.querySelector('.timer__mil-sec');
+
+    // Time dropping
+    time.setHours(0);
+    time.setMinutes(0);
+    time.setSeconds(0);
+    time.setMilliseconds(0);
+
+    function stopwatch(t) {
+      let min = 0;
+      let sec = 0;
+      let milSec = 0;
+
+      setTimeout(() => {
+        t.setMilliseconds(t.getMilliseconds() + 10);
+
+        min = (t.getMinutes() < 10) ? 
+          String('0' +  t.getMinutes()) :
+          String(t.getMinutes());
+        timerMin.textContent = `${min}.`;
+
+        sec = (t.getSeconds() < 10) ? 
+          String('0' +  t.getSeconds()) :
+          String(t.getSeconds());
+        timerSec.textContent = `${sec}.`;
+
+        milSec = (t.getMilliseconds() < 100) ? 
+          String('0' +  t.getMilliseconds()).slice(0, 2) :
+          String(t.getMilliseconds()).slice(0, 2);
+        timerMilSec.textContent = milSec;
+
+        if (document.querySelector('.congrat')) return
+        
+        stopwatch(t);
+        
+      }, 10);
+    }
+
+    stopwatch(time);
   }
 }

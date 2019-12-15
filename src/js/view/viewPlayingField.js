@@ -3,13 +3,16 @@
 import {Rules} from '../model/modelRules';
 import {Settings} from '../model/modelSettings';
 import {Card} from './viewCard';
+import {Timer} from './viewTimer';
 
 
 export class PlayingField {
   constructor() {
     this.container = document.querySelector('.container');
     this.gameTheme = Settings.gameTheme;
+    
     this.addShuffleCards(16, this.gameTheme.theme, this.gameTheme.cardsImg);
+    new Timer();
     Rules.preview();
     this.setContainerWidth();
   }

@@ -1,59 +1,93 @@
-.chooseTheme {
+.start-form {
   display: flex;
   flex-direction: column;
-  // justify-content: center;
   align-items: center;
 
   padding: 30px 70px;
   box-shadow: 20px 20px 40px rgb(0, 0, 0);
   background-color: rgb(182, 245, 228);
   border-radius: 10px;
+}
 
+.enter-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__label {
+    width: 100%;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: rgb(97, 97, 97);
+  }
+
+  &__input {
+    width: 60%;
+    border-bottom: 3px solid rgb(97, 97, 97);
+    padding: 5px 10px;
+    background: none;
+    margin-bottom: 30px;
+
+    text-align: center;
+    color: rgba(97, 97, 97, .4);
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: all .3s;
+
+    &:focus {
+      width: 100%;
+      color: rgba(0, 110, 255, .9);
+      transition: all .5s;
+    }
+  }
+
+  &__button {
+    width: 30%;
+    background: none;
+    color: rgba(97, 97, 97, .4);
+    font-size: 1.3rem;
+    font-weight: bold;
+    transition: all .2s;
+    cursor: pointer;
+
+    &:hover {
+      color: rgba(97, 97, 97, 1);
+      transition: all .5s;
+    }
+  }
+}
+
+.chooseTheme {
   &__title {
     font-size: 3.4rem;
     text-transform: uppercase;
-    // color: ;
     margin-bottom: 60px;
-    border-bottom: 2px solid black;
+    border-bottom: 4px solid rgb(97, 97, 97);
     font-weight: bold;
+    color: rgb(97, 97, 97);
   }
+
   &__list {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+  
   &__list__title {
     position: relative;
     font-size: 1.4rem;
     margin-bottom: 20px;
     &:last-child {margin-bottom: 0;}
     font-weight: bold;
+    color: rgba(97, 97, 97, .4);
     cursor: pointer;
 
-    &::after,
-    &::before {
-      display: none;
-      position: absolute;
-      content: '';
-      top: calc(50% - 2px);
-      width: 30px;
-      height: 4px;
-      border-bottom: 4px solid #237e65;
-    }
-    &::after {right: -45px;}
-    &::before {left: -45px;}
-
     &:hover {
-      &::after, &::before {display: block;}
       transition: all .3s ease-in 0s;
       text-shadow: 5px -5px 10px rgba(0, 0, 0, .2);
-      color: #115543;
+      color: rgba(0, 110, 255, .9);
     }
   }
-
-  &__list__title._rickAndMorty:hover {}
-  &__list__title._starWars:hover {}
-  &__list__title._figure:hover {}
-  &__list__title._animal:hover {}
-  &__list__title._numeric:hover {}
 }
