@@ -5,10 +5,36 @@
   align-items: center;
 
   position: fixed;
-  top: 10px;
-  left: 10px;
+  top: 15px;
+  left: 15px;
 
-  font-size: 2rem;
+  font-size: 3rem;
   color: aquamarine;
   font-weight: bold;
+}
+
+// Медиа запросы
+@media only screen and (min-width : $smDesktopWidth) and (max-width: $desktopWidth) and (max-height: $tableWidth) {
+
+}
+
+@media only screen and (min-width : $tableWidth) and (max-width: $smDesktopWidth) and (max-height: $phoneWidth) {
+
+}
+
+@media only screen and (min-width : $phoneWidth) and (max-width: $tableWidth) and (max-height: $phoneWidth) {
+
+}
+
+@media only screen and (min-width : $phoneWidth) and (max-width: $tableWidth) and (max-height: $smPhoneWidth) {
+
+}
+
+@media only screen and (min-width : $smPhoneWidth) and (max-width: $phoneWidth) {
+  .timer {
+    top: 5%;
+    left: 30px;
+  
+    font-size: 2.5rem;
+  }
 }

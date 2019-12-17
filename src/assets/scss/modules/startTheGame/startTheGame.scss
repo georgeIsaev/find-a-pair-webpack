@@ -16,7 +16,7 @@
 
   &__label {
     width: 100%;
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-transform: uppercase;
     margin-bottom: 30px;
     font-weight: bold;
@@ -33,7 +33,7 @@
     text-align: center;
     color: rgba(97, 97, 97, .4);
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     transition: all .3s;
 
     &:focus {
@@ -47,7 +47,7 @@
     width: 30%;
     background: none;
     color: rgba(97, 97, 97, .4);
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: bold;
     transition: all .2s;
     cursor: pointer;
@@ -56,12 +56,14 @@
       color: rgba(97, 97, 97, 1);
       transition: all .5s;
     }
+    
+    &:active {transition: all 0s;}
   }
 }
 
 .chooseTheme {
   &__title {
-    font-size: 3.4rem;
+    font-size: 3.5rem;
     text-transform: uppercase;
     margin-bottom: 60px;
     border-bottom: 4px solid rgb(97, 97, 97);
@@ -74,10 +76,10 @@
     flex-direction: column;
     align-items: center;
   }
-  
+
   &__list__title {
     position: relative;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     margin-bottom: 20px;
     &:last-child {margin-bottom: 0;}
     font-weight: bold;
@@ -89,5 +91,69 @@
       text-shadow: 5px -5px 10px rgba(0, 0, 0, .2);
       color: rgba(0, 110, 255, .9);
     }
+    &:active {
+      transition: all 0s;
+      text-shadow: 5px -5px 10px rgba(0, 0, 0, .2);
+      color: rgba(0, 110, 255, .9);
+    }
+  }
+}
+
+// Медиа запросы
+@media only screen and (min-width : $smDesktopWidth) and (max-width: $desktopWidth) and (max-height: $tableWidth) {
+
+}
+
+@media only screen and (min-width : $tableWidth) and (max-width: $smDesktopWidth) and (max-height: $phoneWidth) {
+  .start-form {
+    padding: 15px 40px;
+    box-shadow: 10px 10px 20px rgb(0, 0, 0);
+  }
+  .enter-name {&__input {width: 70%;}}
+  .chooseTheme {
+    &__title {
+      font-size: 2rem;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    &__list__title {font-size: 1.2rem;}
+  }
+}
+
+@media only screen and (min-width : $phoneWidth) and (max-width: $tableWidth) and (max-height: $phoneWidth) {
+  .start-form {
+    padding: 15px 40px;
+    box-shadow: 10px 10px 20px rgb(0, 0, 0);
+  }
+  .enter-name {&__input {width: 70%;}}
+  .chooseTheme {
+    &__title {
+      font-size: 2rem;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    &__list__title {font-size: 1.2rem;}
+  }
+}
+
+@media only screen and (min-width : $phoneWidth) and (max-width: $tableWidth) and (max-height: $smPhoneWidth) {
+
+}
+
+@media only screen and (min-width : $smPhoneWidth) and (max-width: $phoneWidth) {
+  .start-form {
+    padding: 15px 15px;
+    box-shadow: 10px 10px 20px rgb(0, 0, 0);
+  }
+
+  .enter-name {&__input {width: 70%;}}
+
+  .chooseTheme {
+    &__title {
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    &__list__title {font-size: 1.2rem;}
   }
 }
