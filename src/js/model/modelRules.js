@@ -1,5 +1,7 @@
 'use strict'
 
+import {Settings} from './modelSettings';
+
 export class Rules {
   constructor() {
     this.cardsFlip = document.querySelectorAll('.flip');
@@ -40,11 +42,43 @@ export class Rules {
 
   static congratulation() {
     if (document.querySelectorAll('.found').length == document.querySelectorAll('.card').length) {
-      document.querySelector('.container').innerHTML = 
-        `<div class="congrat">
-          <h1 class="congrat__title"> Победа! </h1>
+      const playingField = document.querySelector('.playing-field');
+      playingField.classList.remove(Settings.gameTheme.theme);
+
+      Settings.addScore();
+
+      playingField.innerHTML = 
+        `<div class="container">
+          <div class="congrat">
+            <h1 class="congrat__title"> Victory! </h1>
+            <h2 class="congrat__user"> User: ${Settings.userName} </h2>
+            <h2 class="congrat__result"> Result: ${Settings.result} </h2>
+          </div>
         </div>`;
+
+        Rules.scoreTable(playingField);
     }
+  }
+
+  static scoreTable(parent) {
+    const $el = document.createElement('table');
+    $el.classList.add('score-table');
+    $el.innerHTML = `<tr><th>User</th><th>Time</th></tr>`;
+
+    for (let i = 0; i < 10; i++) {
+      let note = document.createElement('tr');
+      let score = Settings.scoreTable[i];
+
+      if (score) {
+        note.innerHTML = `<td>${score.user}</td><td>${score.time}</td>`;
+      } else {
+        note.innerHTML = `<td>---</td><td>---</td>`;
+      }
+      
+      $el.append(note);
+    }
+
+    parent.append($el);
   }
 
   static preview() {
@@ -74,7 +108,7 @@ export class Rules {
     time.setSeconds(0);
     time.setMilliseconds(0);
 
-    function stopwatch(t) {
+    function timer(t) {
       let min = 0;
       let sec = 0;
       let milSec = 0;
@@ -96,14 +130,15 @@ export class Rules {
           String('0' +  t.getMilliseconds()).slice(0, 2) :
           String(t.getMilliseconds()).slice(0, 2);
         timerMilSec.textContent = milSec;
-
-        if (document.querySelector('.congrat')) return
         
-        stopwatch(t);
+        Settings.result = min + sec + milSec;
+        if (document.querySelector('.congrat')) return;
+
+        timer(t);
         
       }, 10);
     }
 
-    stopwatch(time);
+    timer(time);
   }
 }
