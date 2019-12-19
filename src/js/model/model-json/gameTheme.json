@@ -21,9 +21,36 @@
     "/assets/img/rickAndMorty/front_8.svg"
   ],
 
-  "_figure": [],
+  "_figure": [
+    "/assets/img/figure/front_1.svg",
+    "/assets/img/figure/front_2.svg",
+    "/assets/img/figure/front_3.svg",
+    "/assets/img/figure/front_4.svg",
+    "/assets/img/figure/front_5.svg",
+    "/assets/img/figure/front_6.svg",
+    "/assets/img/figure/front_7.svg",
+    "/assets/img/figure/front_8.svg"
+  ],
 
-  "_animal": [],
+  "_animal": [
+    "/assets/img/animal/front_1.svg",
+    "/assets/img/animal/front_2.svg",
+    "/assets/img/animal/front_3.svg",
+    "/assets/img/animal/front_4.svg",
+    "/assets/img/animal/front_5.svg",
+    "/assets/img/animal/front_6.svg",
+    "/assets/img/animal/front_7.svg",
+    "/assets/img/animal/front_8.svg"
+  ],
 
-  "_numeric": []
+  "_numeric": [
+    "/assets/img/numeric/front_1.svg",
+    "/assets/img/numeric/front_2.svg",
+    "/assets/img/numeric/front_3.svg",
+    "/assets/img/numeric/front_4.svg",
+    "/assets/img/numeric/front_5.svg",
+    "/assets/img/numeric/front_6.svg",
+    "/assets/img/numeric/front_7.svg",
+    "/assets/img/numeric/front_8.svg"
+  ]
 }

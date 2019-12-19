@@ -1,0 +1,13 @@
+.card._animal {
+  .front {
+    background: url('/assets/img/animal/shirt_1.svg') no-repeat center rgba(16, 156, 250, 0.63);
+    background-size: 60%;
+  }
+
+  .back {
+    background-size: 60%;
+    background-color: rgba(228, 201, 213, 0.445);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

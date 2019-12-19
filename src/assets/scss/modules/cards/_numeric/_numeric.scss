@@ -1,0 +1,13 @@
+.card._numeric {
+  .front {
+    background: url('/assets/img/numeric/shirt_1.svg') no-repeat center #fffb0060;
+    background-size: 70%;
+  }
+
+  .back {
+    background-size: 60%;
+    background-color: rgba(155, 218, 191, 0.555);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
