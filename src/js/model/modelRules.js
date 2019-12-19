@@ -50,9 +50,11 @@ export class Rules {
       playingField.innerHTML = 
         `<div class="container">
           <div class="congrat">
-            <h1 class="congrat__title"> Victory! </h1>
-            <h2 class="congrat__user"> User: ${Settings.userName} </h2>
-            <h2 class="congrat__result"> Result: ${Settings.result} </h2>
+            <h1 class="congrat__title"> Victory </h1>
+            <div class="congrat__user">
+              <p class="congrat__user__name"> User: ${Settings.userName} </p>
+              <p class="congrat__user__result"> Result: ${Settings.result} </p>
+            </div>
           </div>
         </div>`;
 
@@ -60,17 +62,21 @@ export class Rules {
     }
   }
 
-  static scoreTable(parent) {
+  static scoreTable() {
     const $el = document.createElement('table');
     $el.classList.add('score-table');
-    $el.innerHTML = `<tr><th>User</th><th>Time</th></tr>`;
+    $el.innerHTML = `<thead><tr><th>User</th><th>Time</th></tr></thead>`;
 
     for (let i = 0; i < 10; i++) {
       let note = document.createElement('tr');
       let score = Settings.scoreTable[i];
 
       if (score) {
-        note.innerHTML = `<td>${score.user}</td><td>${score.time}</td>`;
+        let min = score.time.slice(0, 2);
+        let sec = score.time.slice(2, 4);
+        let milSec = score.time.slice(4);
+
+        note.innerHTML = `<td>${score.user}</td><td>${min}.${sec}.${milSec}</td>`;
       } else {
         note.innerHTML = `<td>---</td><td>---</td>`;
       }
@@ -78,7 +84,7 @@ export class Rules {
       $el.append(note);
     }
 
-    parent.append($el);
+    document.querySelector('.congrat').append($el);
   }
 
   static preview() {

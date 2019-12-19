@@ -1,13 +1,5 @@
 'use strict'
 
-// class UserConfig {
-//   constructor(userTheme = 'StarWars', gameDifficulty = 'medium', userCount = 1, usersName = 'NoName') {
-//     this.theme = userTheme;
-//     this.difficulty = gameDifficulty;
-//     this.users = userCount;
-//     this.usersName = usersName;
-//   }
-// }
 import {Settings} from '../model/modelSettings';
 import {PlayingField} from '../view/viewPlayingField';
 import {StartTheGame} from '../view/viewStartTheGame';
