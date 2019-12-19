@@ -1,6 +1,6 @@
 # find-a-pair
 
-<h1>This is a card game</h1>
+This is a card game
 
 <h2>Used technology</h2>   
 <ul>
@@ -14,4 +14,4 @@
 
 <h2><a href="https://github.com/georgeIsaev/find-a-pair">Build version</a></h2>
 
-<h2><a href="https://georgeisaev.github.io/find-a-pair/index.html">Play</a></h2>
+<h1><a href="https://georgeisaev.github.io/find-a-pair/index.html">Play</a></h1>
